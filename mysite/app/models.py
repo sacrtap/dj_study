@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class DBINFO(models.Model):
+    id = models.AutoField()
     albumName = models.CharField(max_length=45)
     credits = models.CharField(max_length=45)
     source = models.CharField(max_length=45)
