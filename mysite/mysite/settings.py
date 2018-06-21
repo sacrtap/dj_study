@@ -74,13 +74,23 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'test_db', #数据库的名字 需要在sql中设置
+        'USER': 'sacrtap',
+        'PASSWORD': 'tanshitao',
+        'HOST': 'localhost',    # 主机
+        'PORT': '3306',         # 数据库使用的端口
+     }
 
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
